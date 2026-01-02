@@ -4,7 +4,7 @@
 #include <unordered_map>
 //defn
 
-int main () {
+int outpath () {
     std::unordered_map<std::string, int> OutMenu;
 
     OutMenu["Cheezburger"] = 5;
