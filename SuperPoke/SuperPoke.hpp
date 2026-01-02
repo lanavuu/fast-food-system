@@ -15,6 +15,6 @@ class pokeBowl {
     public:
 
     private:
-}
+};
 
 #endif
