@@ -71,7 +71,14 @@ void pokeBowl::pickProteins() {
 
 }
 
-void pokeBowl::pickSauce() {
+void pokeBowl::pickSauce() { // up to 3 sauzes max
+    int sauceMax;
+    std::vector<std::string> sauces {"soy sauce", "super sauce", "ponzu", "spicy mayo", "eel sauce", "spizy ponzu"};
+
+    sauceMax = rand() % 3;
+    for (int index = 0; index < sauceMax; index++) {
+        sauce_[index] = sauces[rand() % 6];
+    }
 
 }
 
