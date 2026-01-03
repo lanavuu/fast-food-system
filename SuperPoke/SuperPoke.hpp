@@ -36,7 +36,7 @@ class pokeBowl { //making a bowl, this is not the restaurant
     void pickProteins();
     void pickSauce();
     void topItOff();
-    std::string printOrder();
+    void printOrder();
     int calculateOrder();
 
 
