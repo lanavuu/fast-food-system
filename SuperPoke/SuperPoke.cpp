@@ -4,11 +4,12 @@
 #include <cstdlib>
 #include <ctime>
 
+
 #include <unordered_map>
 
 pokeBowl::pokeBowl() { // pokebowl is a member of the pokebowl class, compile knows where all the private members come from
     size_ = "";
-    base_ = "";
+    base_ = "no base";
     topping_; //empty vectors
     proteins_;
     sauce_;
@@ -83,13 +84,49 @@ void pokeBowl::pickSauce() { // up to 3 sauzes max
 }
 
 std::string pokeBowl::printOrder() {
-    std::cout << "You ordered a " ;
+    std::string toppings;
+    std::string proteins;
+    std::string sauces;
+    std::string topOffs;
+    //convert vector to a string ez
+
+    for (int index = 1; index < topping_.size(); index++) {
+        toppings = topping_[0];
+        toppings = toppings + ", " + topping_[index];
+        
+    }
+
+    for (int index = 1; index < proteins_.size(); index++) {
+        proteins = proteins_[index];
+        proteins = proteins + ", " + proteins_[index];
+    }
+
+    for (int index = 1; index < sauce_.size(); index++) {
+        //print index 0, store in sauce string
+        sauces = sauce_[0];
+        sauces = sauces + ", " + sauce_[index];
+    }
+
+    for (int index = 1; index < top_off_.size(); index++) {
+        topOffs = top_off_[0];
+        topOffs = topOffs + ", " + top_off_[index];
+    }
+    
+
+
+    return ("You ordered a " + size_ + " bowl with " + base_ + ". For your toppings you chose " + toppings + ". For proteins you chose " +
+    proteins + " with sauces " + sauces + ". To top it off, you chose " + topOffs + ".\n"); // convert vector to string, print
 }
 
 int pokeBowl::calculateOrder() {
 
 }
     
+
+
+
+
+
 
 void pokePath() { //PATHWAY
     std::unordered_map<std::string, double> pokeMenu;
