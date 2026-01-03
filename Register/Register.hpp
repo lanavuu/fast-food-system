@@ -16,6 +16,8 @@ class registerSys{
     public:
     registerSys();
 
+    double change(double order);
+
 
 
     private:

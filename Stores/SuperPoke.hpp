@@ -38,11 +38,12 @@ class pokeBowl { //making a bowl, this is not the restaurant
     void pickSauce();
     void topItOff();
     std::string printOrder();
-    double calculateOrder(double size, double protein, double toppings, double sauces);
+    std::string calculateOrder();
+    void setSize(std::string& size);
+    /*
     void setOrder(int size, double proteins, double toppings, double sauces);
-    // how to determine if order has extra toppings?
-    // 
-
+    bool extras(); 
+    */
 
     private: // these come from RNG, DONT PUT THEM IN THE CONSTRUCTOR.
     std::string size_; 
@@ -52,10 +53,11 @@ class pokeBowl { //making a bowl, this is not the restaurant
     std::vector<std::string> top_off_;
     std::vector<std::string> sauce_;
 
-
+    /*
     const double extra_proteins_ = .90;
     const double extra_toppings_ = .50;
     const double extra_sauces_ = .05;
+    */
 
 };
 

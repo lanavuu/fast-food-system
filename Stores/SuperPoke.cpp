@@ -118,7 +118,10 @@ std::string pokeBowl::printOrder() {
     return ("You ordered a " + size_ + " bowl with " + base_ + ". For your toppings you chose " + toppings + ". For proteins you chose " +
     proteins + " with sauces " + sauces + ". To top it off, you chose " + topOffs + ".\n"); // convert vector to string, print
 }
-    //randomly select if customer wants extra protein, toppings, or sauces. 
+    void pokeBowl::setSize (std::string& size) {
+        size_ = size;
+    } // need to set the size for order calculations
+    
     // scrap for now, work on simplier methods first.
     /*
     bool extras() {
@@ -127,11 +130,18 @@ std::string pokeBowl::printOrder() {
 
     void setOrder(int size, double proteins, double toppings, double sauces) {}
     */
-    double pokeBowl::calculateOrder(double size) {
+    std::string pokeBowl::calculateOrder() {
+      
     // read the receipt/order
     // calculate it by inputting size and any extras
-    // if size 
-    this->size_ = size;
+    // if statements, cant grasp my idea, trying this first
+    if (size_ == "Small") {
+        return "Okay you ordered a small, that will be $14 please";
+    } else if (size_ == "Medium") {
+        return "Okay you ordered a medium, that will be $17 please";
+    } else if (size_ == "Large") {
+        return "Okay you ordered a large, that will be $20 please";
+    }
 
 
 }

@@ -47,6 +47,7 @@
     - have all store funds
     - add decorative items to boost store perks
     - hire employees
+    - responsibly stock items and make sure items aren't out of stock
 - Kitchen postion
     - work on the food
 - Premium customers
