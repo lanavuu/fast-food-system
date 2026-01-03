@@ -17,6 +17,7 @@
 // itemComparison() - with other stores
 // confirmOrder() - state order, to confirm correctness
 // register() calculate change
+void outPath();
 
 class outandin {
     public:

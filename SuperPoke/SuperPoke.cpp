@@ -19,6 +19,29 @@ void pokeBowl::pickSize() {
     
 }
 
+void pokeBowl::pickBase() {
+
+}
+
+void pokeBowl::pickTopping() {
+
+}
+
+void pokeBowl::pickProteins() {
+
+}
+
+void pokeBowl::pickSauce() {
+
+}
+
+std::string pokeBowl::printOrder() {
+
+}
+
+int pokeBowl::calculateOrder() {
+
+}
     
 
 void pokePath() { //PATHWAY

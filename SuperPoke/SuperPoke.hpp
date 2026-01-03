@@ -41,6 +41,7 @@ class pokeBowl { //making a bowl, this is not the restaurant
 
 
     private: // these come from RNG, DONT PUT THEM IN THE CONSTRUCTOR.
+    std::string size_;
     std::string base_;
     std::string protein_;
     std::string topping_;

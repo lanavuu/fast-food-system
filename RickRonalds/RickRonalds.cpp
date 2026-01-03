@@ -1,13 +1,14 @@
 #include "RickRonalds.hpp"
 #include <iostream>
-
+#include <vector>
 #include <unordered_map>
 
-int rickPath() {
+void rickPath() {
     std::unordered_map<std::string, double> rickMenu;
 
     rickMenu["Cheese Burger"] = 2;
     rickMenu["Plain Burger"] = 2;
+    rickMenu["Rick-Double"] = 5.67;
     rickMenu["Swordfish Burger"] = 2.5;
     rickMenu["4 pc RickNuggets"] = 3;
     rickMenu["10 pc rickNuggets"] = 4.5;
@@ -18,6 +19,7 @@ int rickPath() {
     rickMenu["Soda"] = 2;
     rickMenu["Mango-banana Smoothie"] = 4.67;
     rickMenu["Strawberry-banana Smoothie"] = 4.67;
+    rickMenu["Rick-Flurry"] = 4.50;
 
     std::cout << "This is our menu: ";
 
@@ -25,6 +27,4 @@ int rickPath() {
         std::cout << i.first << " $" << i.second;
     }
 
-
-    return 0;
 }
