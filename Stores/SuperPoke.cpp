@@ -1,5 +1,5 @@
 #include "SuperPoke.hpp"
-#include "../money/money.hpp"
+#include "../Register/Register.hpp"
 #include <iostream>
 #include <vector>
 #include <cstdlib>
@@ -112,7 +112,7 @@ std::string pokeBowl::printOrder() {
         topOffs = top_off_[0];
         topOffs = topOffs + ", " + top_off_[index];
     }
-    
+    // this is so incredibly ineffiencet i know, will return after i finish everything bc im lazy
 
 
     return ("You ordered a " + size_ + " bowl with " + base_ + ". For your toppings you chose " + toppings + ". For proteins you chose " +
