@@ -29,18 +29,20 @@ void pokeBowl::pickBase() {
 }
 
 void pokeBowl::pickTopping() {
+    topping_.clear();
     int toppingMax;
     std::vector<std::string> toppings = {"crabmeat", "spicy crabmeat", "seaweed salad", "cucumber", "edamame", "corn",
     "onions", "mango", "pickled radish", "avacado"};
     //how do i store up to five toppings? -> turn into a list
     // randomly choose max amount of topping
-    toppingMax = rand() % 5; // randomly choose amount of toppings 1-5
+    toppingMax = 1 + rand() % 5; // randomly choose amount of toppings 1-5
     // store random toppings into topping_ (toppingMax) amount of times
+
     for (int index = 0; index < toppingMax; index++) {
-        topping_[index] = toppings[rand() % 10]; 
+        topping_.push_back(toppings[rand() % 10]); //I FORGOT THIS DOES NOT HAVE ANYTHING IN IT
         //for current index at topping
-        // set it equal to toppings at this random index (random topping)
-        // continue until index is less than toppingMax
+        // push random item onto the vector
+        // continue until for loop logic breaks
     }
     
 
@@ -67,9 +69,9 @@ void pokeBowl::pickProteins() {
     // if random reaches max protein, stop
     // store random proteins in a list
     for (int index = 0; index < proteinMax; index++) {
-        proteins_[index] = proteins[rand() % 8]; // i randomly selects from proteins vector and keeps storing proteins 
+        proteins_.push_back(proteins[rand() % 8]);// i randomly selects from proteins vector and keeps storing proteins 
                                                     // until it reaches the max proteins
-    } // index in protein i randomly stores from protein vector while for loop conditrion tru
+    } // fixed
 
 }
 
@@ -79,7 +81,7 @@ void pokeBowl::pickSauce() { // up to 3 sauzes max
 
     sauceMax = rand() % 3;
     for (int index = 0; index < sauceMax; index++) {
-        sauce_[index] = sauces[rand() % 6];
+        sauce_.push_back(sauces[rand() % 6]); //fixed
     }
 
 }
@@ -146,7 +148,11 @@ std::string pokeBowl::printOrder() {
 
 }
     
-
+    // NO MONEY, PAYMENT, OR CHANGE
+    // NO MONEY, PAYMENT, OR CHANGE
+        
+    // NO MONEY, PAYMENT, OR CHANGE
+    // NO MONEY, PAYMENT, OR CHANGE
 
 
 
