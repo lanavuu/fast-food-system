@@ -173,6 +173,8 @@ std::string pokeBowl::printOrder() {
 
 void pokePath() { //PATHWAY
 
+    registerSys POS;
+
     char choice;
     bool shift = true;
 
