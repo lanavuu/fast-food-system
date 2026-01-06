@@ -1,4 +1,5 @@
 #include "Register.hpp"
+#include "../Stores/SuperPoke.hpp"
 
 #include <iostream>
 
@@ -21,6 +22,12 @@ void registerSys::setPayment(paymentType type) {
 double registerSys::change(double order, double total) {
 
     return total - order;
+
+}
+// TODO: Compare the change, if user input == rng input then continue
+// else repeat until user puts in the correct change
+bool registerSys::compareChange(double amountDue, double userGiven) {
+    return amountDue == userGiven;
 
 }
 
