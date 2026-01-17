@@ -130,7 +130,7 @@ std::string pokeBowl::printOrder() {
     return ("-------------------------------------------------\n"
         "\nCUSTOMER RECIPT: Customer ordered a " + size_ + " bowl with " + base_ +
         ".\nTOPPINGS: " + toppings + ".\nPROTEINS: " +
-    proteins + "\nSAUCES: " + sauces + ".\nTOP-OFFS: " + topOffs +
+    proteins + "\nSAUCES: " + sauces + ".\nTOP-OFFS: " + topOffs + "\n" +
     ".\n-------------------------------------------------\n"); // convert vector to string, print
 }
     void pokeBowl::setSize (std::string& size) {
@@ -149,7 +149,7 @@ std::string pokeBowl::printOrder() {
     // read the receipt/order
     // calculate it by inputting size and any extras
     // if statements, cant grasp my idea, trying this first
-
+        price_ = 0.0;
         if (size_ == "Small") {
             price_ = 14;
             std::cout << "YOU: Okay you ordered a small, that will be $14 please\n";
@@ -202,6 +202,7 @@ void pokePath() { //PATHWAY
     // if clock out, break out of loop then ask "go home?" quit job option
 
     //create new bowl for each new customer
+    std::cout << std::fixed << std::setprecision(2);
 
     while (shift) {
         std::string paymentString;
@@ -228,10 +229,10 @@ void pokePath() { //PATHWAY
 
         POS.setPayment(type);
         customerChange = bowl.customerChange();
-        double change = POS.change(bowl.customerChange(), bowlPrice);
+        double change = POS.change(customerChange, bowlPrice);
 
-        std::cout << "Customer: I am paying with " << paymentString << "\nHere is my money: $" 
-        << std::fixed << std::setprecision(2) << customerChange << ".\n"; // got the payment
+        std::cout << "Customer: I am paying with " << paymentString << "\nHere is my money: $"
+        << customerChange << ".\n"; // got the payment
         std::cout << "REGISTER: You owe: " << posChange << "\n"; //register function
         
        
