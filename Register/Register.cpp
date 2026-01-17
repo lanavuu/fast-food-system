@@ -19,9 +19,9 @@ void registerSys::setPayment(paymentType type) {
     paymentType_ = type;
 }
 
-double registerSys::change(double order, double total) {
+double registerSys::change(double moneyGiven, double moneyOwed) {
 
-    return total - order;
+    return moneyGiven - moneyOwed;
 
 }
 // TODO: Compare the change, if user input == rng input then continue

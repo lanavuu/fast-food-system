@@ -55,3 +55,6 @@
 - Choices: quit job, clock out, clock in, go home, shop
 - different customer dialogues
 - if the change input incorrect more than 3 times, decrease customer satisfaction and store profits
+
+## Bugs
+- cash and credit logic not fully implemented
