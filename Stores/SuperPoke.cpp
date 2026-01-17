@@ -184,6 +184,10 @@ return price_;
     
 
 
+
+
+
+
 void pokePath() { //PATHWAY
 
     registerSys POS;
@@ -235,7 +239,18 @@ void pokePath() { //PATHWAY
        } 
        std::cout << "Transaction completed!\n";
 
-        std::cout << "Clock out?\n";
-        std::cin >> choice;
+    }
+
+    std::cout << "CLOCK OUT?\n";
+    std::cout << "Enter 'y' or 'n': \n ";
+    std::cin >> choice;
+    choice = std::tolower(choice);
+    if (choice == 'y') {
+        std::cout << "Bye!\n";
+        shift = false;
+
+    } else {
+        std::cout << "Keep working.\n";
+    } 
 
 }
