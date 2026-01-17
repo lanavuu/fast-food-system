@@ -2,6 +2,7 @@
 #include "../Stores/SuperPoke.hpp"
 
 #include <iostream>
+#include <iomanip>
 
 registerSys::registerSys() 
 : penny_(1), nickel_(5), dime_(10), quarter_(25), paymentType_(paymentType::Cash)
@@ -19,9 +20,15 @@ void registerSys::setPayment(paymentType type) {
     paymentType_ = type;
 }
 
-double registerSys::change(double moneyGiven, double moneyOwed) {
-
-    return moneyGiven - moneyOwed;
+double registerSys::change(double orderCost, double customerMoney) {
+ 
+    std::cout << std::fixed << std::setprecision(2) 
+    << "\nThe bowl costs: $" << orderCost
+    << "\nCustomer gave: $" << customerMoney << "\n" << customerMoney << " - "
+    << orderCost << " = $" <<
+    (customerMoney - orderCost) << "\n";
+   
+    return (customerMoney - orderCost);
 
 }
 // TODO: Compare the change, if user input == rng input then continue
