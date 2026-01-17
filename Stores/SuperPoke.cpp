@@ -205,15 +205,17 @@ void pokePath() { //PATHWAY
 
     while (shift) {
         std::string paymentString;
-        double changeAmount;
+        double customerChange = 0.0;
         paymentType type;
-        double enterChange;
-        double change;
+        double enterChange = 929393;
+        double posChange = 0.0;
+        
+        
 
         pokeBowl bowl; //create a bowl object
         bowl.buildBowl(); // randomly build new bowl
         std::cout << bowl.printOrder(); // print the order
-        double order = bowl.calculateOrder(); // calculate the price of the bowl
+        double bowlPrice = bowl.calculateOrder(); // calculate the price of the bowl
 
         int random = rand() % 100;  // rng cash or card
         if (random < 80) {
@@ -225,30 +227,28 @@ void pokePath() { //PATHWAY
         }
 
         POS.setPayment(type);
-        changeAmount = bowl.customerChange();
-        double change = POS.change(bowl.customerChange(), order);
+        customerChange = bowl.customerChange();
+        double change = POS.change(bowl.customerChange(), bowlPrice);
 
         std::cout << "Customer: I am paying with " << paymentString << "\nHere is my money: $" 
-        << std::fixed << std::setprecision(2) << changeAmount << ".\n"; // got the payment
-        std::cout << "REGISTER: You owe: " << change << "\n"; //register function
-        double enterChange;
+        << std::fixed << std::setprecision(2) << customerChange << ".\n"; // got the payment
+        std::cout << "REGISTER: You owe: " << posChange << "\n"; //register function
+        
        
 
 
        //if change is correct, proceed, if not repeat until correct for now
-       double enterChange;
-       while (true) {
+       
+       while (!POS.compareChange(posChange, enterChange)) {
         std::cout << "REGISTER: Enter change: \n";
         std::cin >> enterChange;
-            if (POS.compareChange(change, order)) {
+            if (POS.compareChange(posChange, enterChange)) {
                 std::cout << "REGISTER: Transaction successful!\n";
                 break;
             } else {
                 std::cout << "REGISTER: Incorrect, please try again\n";
             }
        } 
-
-    }
 
     std::cout << "CLOCK OUT?\n";
     std::cout << "Enter 'y' or 'n': \n ";
@@ -261,5 +261,6 @@ void pokePath() { //PATHWAY
     } else {
         std::cout << "Keep working.\n";
     } 
+    }
 
 }
