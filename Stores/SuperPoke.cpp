@@ -227,14 +227,14 @@ void pokePath() { //PATHWAY
 
         POS.setPayment(type);
         customerChange = bowl.customerChange();
-        posChange = POS.change(bowlPrice, customerChange);
+        
         
         std::cout << "Customer: I am paying with " + paymentString + ".\n";
         
        if (paymentPath == 1) {
 
         while (!POS.compareChange(posChange, enterChange)) {
-            
+            posChange = POS.change(bowlPrice, customerChange);
             std::cout << "Customer: Here is my money: $" << customerChange << ".\n"; // got the payment
             std::cout << "REGISTER: You owe: " << posChange << "\n"; //register function
             std::cout << "REGISTER: Enter change: \n";
