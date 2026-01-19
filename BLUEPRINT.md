@@ -24,7 +24,6 @@
 - Customer queries: BST
 
 ## Game Flow
-
 1. Birth, given 3 stores to work at
 2. Start taking orders
 3. Restate order to confirm correctness (a receipt)
@@ -39,9 +38,20 @@
     - Depending on happy points = tips
 
 
+## Bugs/work on/TODO
+- continue working on rickronalds modularity
+    - RNG ordering
+    - NPC lines/ordering logic
+    -meal combos
+
+- incorporate coin system for more interactivity
+-implement rickronalds and outandin stores
+- create customer questions
+    -implement data structure $ algorithm for finding cheapest/expensive items
+- better game flow (npc customer should do more)
+
 
 ## Future
-- Focus on cashiering system first before moving onto bigger ideas
 - Track earnings
 - Manager position
     - have all store funds
@@ -56,5 +66,4 @@
 - different customer dialogues
 - if the change input incorrect more than 3 times, decrease customer satisfaction and store profits
 
-## Bugs
-- cash and credit logic not fully implemented
+

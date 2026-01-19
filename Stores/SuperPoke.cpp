@@ -131,7 +131,7 @@ std::string pokeBowl::printOrder() {
         "\nCUSTOMER RECIPT: Customer ordered a " + size_ + " bowl with " + base_ +
         ".\nTOPPINGS: " + toppings + ".\nPROTEINS: " +
     proteins + "\nSAUCES: " + sauces + ".\nTOP-OFFS: " + topOffs + "\n" +
-    ".\n-------------------------------------------------\n"); // convert vector to string, print
+    "\n-------------------------------------------------\n"); // convert vector to string, print
 }
     void pokeBowl::setSize (std::string& size) {
         size_ = size;
