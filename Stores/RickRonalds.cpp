@@ -4,6 +4,7 @@
 #include <vector>
 #include <unordered_map>
 
+rickOrder::
 void rickPath() {
     std::unordered_map<std::string, double> rickMenu;
 
