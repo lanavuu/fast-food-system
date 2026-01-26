@@ -18,6 +18,7 @@ class rickMenu {
 
 class rickOrder {
     public:
+    rickOrder();
 
     void generateNPCOrder();
     void calculateOrderTotal();

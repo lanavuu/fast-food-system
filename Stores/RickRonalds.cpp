@@ -31,7 +31,11 @@ rickOrder::rickOrder() {
 }
 
 void rickOrder::generateNPCOrder() {
+    int random;
     
+
+    random = rand() % burgers_.size();
+    npcBurger = 
 
 }
 
