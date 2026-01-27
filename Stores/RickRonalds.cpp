@@ -31,13 +31,27 @@ rickOrder::rickOrder() {
 }
 
 void rickOrder::generateNPCOrder() {
-    int random;
-    std::string npcBurger;
+    int randomIndex;
+    std::string randomBurgerIndex;
+    std::string randomFriesIndex;
+    std::string randomDrinksIndex;
+    std::string randomExtrasIndex;
 
-    random = rand() % burgers_.size(); // pick a random number from the size of the burger vector
-    npcBurger = burgers_[random]; // store the random burger at the index of random
-    npcOrder_.push_back(npcBurger); // put the random burger into the order
-   
+    randomIndex = rand() % burgers_.size(); // pick a random number from the size of the burger vector
+    randomBurgerIndex = burgers_[randomIndex]; // store the random burger at the index of random
+    npcOrder_.push_back(randomBurgerIndex); // put the random burger into the order
+
+    randomIndex = rand() % fries_.size();
+    randomFriesIndex = fries_[randomIndex];
+    npcOrder_.push_back(randomFriesIndex);
+
+    randomIndex = rand() % drinks_.size();
+    randomDrinksIndex = drinks_[randomIndex];
+    npcOrder_.push_back(randomDrinksIndex);
+
+    randomIndex = rand() % extraAndDessert_.size();
+    randomExtrasIndex = extraAndDessert_[randomIndex];
+    npcOrder_.push_back(randomExtrasIndex);
 
 }
 
@@ -68,7 +82,12 @@ rickMenu::rickMenu() {
 void rickPath() {
     std::unordered_map<std::string, double> rickMenu;
 
+    bool shift = true;
 
+    while(shift) {
+        rickOrder order;
+        order.generateNPCOrder();
+    }
     /*std::cout << "This is our menu: ";
 
     for (auto i : rickMenu) {
