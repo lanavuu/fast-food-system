@@ -32,10 +32,12 @@ rickOrder::rickOrder() {
 
 void rickOrder::generateNPCOrder() {
     int random;
-    
+    std::string npcBurger;
 
-    random = rand() % burgers_.size();
-    npcBurger = 
+    random = rand() % burgers_.size(); // pick a random number from the size of the burger vector
+    npcBurger = burgers_[random]; // store the random burger at the index of random
+    npcOrder_.push_back(npcBurger); // put the random burger into the order
+   
 
 }
 
