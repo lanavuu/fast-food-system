@@ -3,6 +3,8 @@
 #include <iostream>
 #include <vector>
 
+void rickPath();
+
 class rickMenu {
     public:
 
@@ -28,7 +30,7 @@ class rickOrder {
     
     private:
     rickMenu menu_;
-    registerSys POS_;
+
     std::vector<std::string> npcOrder_;
     std::vector<std::string> burgers_;
     std::vector<std::string> fries_;
