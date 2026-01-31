@@ -182,11 +182,6 @@ return price_;
     }
     
 
-
-
-
-
-
 void pokePath() { //PATHWAY
 
     registerSys POS;

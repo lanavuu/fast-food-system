@@ -39,10 +39,12 @@
 
 
 ## Bugs/work on/TODO
+- fix register system, put rng change inside register functions do not create each RNGCHANGE function in each store
+    - i am repeating the change function, but can create extra change in register function again
+    - realized i accidentally allowed register to know what a bowl was, fix it
 - continue working on rickronalds modularity
-    - RNG ordering
     - NPC lines/ordering logic
-    -meal combos
+    - meal combos
 
 - incorporate coin system for more interactivity
 -implement rickronalds and outandin stores

@@ -73,6 +73,11 @@
             }
         }
     }
+
+    double rickOrder::customerChange() {
+        double change;
+        
+    }
     rickOrder::~rickOrder() {
         delete menuPtr;
         menuPtr = nullptr;
@@ -117,7 +122,8 @@
             order.generateNPCOrder();
             order.printOrder();
             cost = order.calculateOrderTotal();
-            std::cout << "YOU: In total, that will cost $" + cost + 
+            std::cout << "YOU: In total, that will cost $" << cost << ". \n"; 
+            
 
             
 

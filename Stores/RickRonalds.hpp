@@ -22,15 +22,17 @@ class rickMenu {
 class rickOrder {
     public:
     rickOrder();
+    ~rickOrder();
 
     void generateNPCOrder();
     double calculateOrderTotal();
     void printOrder();
+    double customerChange();
     //RNG ORDER
     
     
     private:
-    rickMenu menu_;
+    rickMenu* menuPtr;
 
     std::vector<std::string> npcOrder_;
     std::vector<std::string> burgers_;
