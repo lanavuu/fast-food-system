@@ -12,6 +12,7 @@ class rickMenu {
     
     // method 1: choices from 1-3
     // other function determines if 1 then this type, if 2 then this type 
+    double getPrice(const std::string&);
 
     private:
     std::unordered_map<std::string, double> items;
@@ -23,7 +24,7 @@ class rickOrder {
     rickOrder();
 
     void generateNPCOrder();
-    void calculateOrderTotal();
+    double calculateOrderTotal();
     void printOrder();
     //RNG ORDER
     

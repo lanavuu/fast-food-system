@@ -6,6 +6,8 @@
 #include <cstdlib>
 
     rickOrder::rickOrder() {
+        menuPtr = new rickMenu();
+
         burgers_.push_back("RickCheese Burger");
         burgers_.push_back("RickPlain Burger");
         burgers_.push_back("Rick-Double");
@@ -54,15 +56,26 @@
         npcOrder_.push_back(randomExtrasIndex);
 
     }
+    double rickOrder::calculateOrderTotal() {
+        double total = 0.0;
+        for (const std::string& theItem : npcOrder_) { 
+            total += menuPtr->getPrice(theItem);
 
+        }
+        return total;
+    }
     void rickOrder::printOrder() {
         std::cout << "YOU: You ordered: ";
         for (int item = 0; item < npcOrder_.size(); item++) {
             std::cout << npcOrder_[item] + ", ";
             if (item == (npcOrder_.size() - 1)) {
-                std::cout << "and" + npcOrder_[item] + ".\n";
+                std::cout << "and " + npcOrder_[item] + ".\n";
             }
         }
+    }
+    rickOrder::~rickOrder() {
+        delete menuPtr;
+        menuPtr = nullptr;
     }
 
     rickMenu::rickMenu() {
@@ -87,6 +100,9 @@
         items["Rick Discount Combo"] = 5; // cheaper combo includes one RickCheese burger, one small fry, and a soda
         items["Rick's No Meat Combo"] = 6.77; // swordfish burger, medium fries, soda
 }
+    double rickMenu::getPrice(const std::string& itemName) {
+        return items[itemName];
+    }
 
 
     void rickPath() {
@@ -95,9 +111,14 @@
         bool shift = true;
 
         while(shift) {
+            double cost;
+
             rickOrder order;
             order.generateNPCOrder();
             order.printOrder();
+            cost = order.calculateOrderTotal();
+            std::cout << "YOU: In total, that will cost $" + cost + 
+
             
 
 
