@@ -55,6 +55,12 @@
 
     }
 
+    void rickOrder::printOrder() {
+        for (int item = 0; item < npcOrder_.size(); item++) {
+            std::cout << "YOU: You ordered: " + npcOrder_[item];
+        }
+    }
+
     rickMenu::rickMenu() {
         //structured as a whole order
         items["RickCheese Burger"] = 2;
