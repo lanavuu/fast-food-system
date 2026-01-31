@@ -56,8 +56,12 @@
     }
 
     void rickOrder::printOrder() {
+        std::cout << "YOU: You ordered: ";
         for (int item = 0; item < npcOrder_.size(); item++) {
-            std::cout << "YOU: You ordered: " + npcOrder_[item];
+            std::cout << npcOrder_[item] + ", ";
+            if (item == (npcOrder_.size() - 1)) {
+                std::cout << "and" + npcOrder_[item] + ".\n";
+            }
         }
     }
 
