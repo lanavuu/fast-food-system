@@ -93,6 +93,7 @@
         while(shift) {
             rickOrder order;
             order.generateNPCOrder();
+            order.printOrder();
             
 
 
